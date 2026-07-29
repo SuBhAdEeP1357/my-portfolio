@@ -1063,3 +1063,34 @@ section {
     filter: blur(30px);
 
 }
+
+/* ==========================================
+   Responsive Design
+========================================== */
+
+@media (max-width: 992px) {
+
+    /* Your existing responsive CSS */
+
+}
+
+@media (max-width: 768px) {
+
+    #home {
+
+        min-height: auto;
+
+        padding-top: 120px;
+        padding-bottom: 80px;
+
+    }
+
+    /* Your existing mobile CSS */
+
+}
+
+@media (max-width: 480px) {
+
+    /* Your existing small mobile CSS */
+
+}

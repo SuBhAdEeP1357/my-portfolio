@@ -80,7 +80,7 @@ my-portfolio/
 
 📧 Email
 
-subhadeepadikary300@gmail.com
+iot23.subhadeepadhikary.31@gmail.com
 
 💼 LinkedIn
 

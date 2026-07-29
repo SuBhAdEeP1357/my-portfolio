@@ -14,15 +14,15 @@ A modern, responsive portfolio website built using **HTML**, **CSS**, and **Java
 
 ## 🚀 Live Demo
 
-🌐 **Website**
+🌐 **Website:**
 
-https://subhadeep1357.github.io/my-portfolio/
+[Visit My Portfolio](https://subhadeep1357.github.io/my-portfolio/)
 
 ---
 
 ## 👨‍💻 About
 
-Hello! I'm **Subhadeep Adhikary**, a passionate Computer Science student from Asansol Engineering College.
+Hello! I'm **Subhadeep Adhikary**, a passionate Computer Science and Engineering student at **Asansol Engineering College**, dedicated to building responsive web applications and continuously improving my software development skills.
 
 This portfolio highlights my:
 
@@ -38,14 +38,13 @@ The website was designed with a clean, modern, and responsive user interface to 
 ## ✨ Features
 
 - Responsive Design
-- Light & Dark Theme
+- Dual Theme (Light & Dark Mode)
 - Smooth Scrolling
 - Animated Sections
 - Download Resume
 - Project Showcase
 - Contact Section
 - Glassmorphism UI
-- Mobile Friendly
 
 ---
 
@@ -54,6 +53,8 @@ The website was designed with a clean, modern, and responsive user interface to 
 - HTML5
 - CSS3
 - JavaScript
+- Git
+- GitHub
 - GitHub Pages
 
 ---
@@ -80,15 +81,11 @@ my-portfolio/
 
 📧 Email
 
-iot23.subhadeepadhikary.31@gmail.com
+[iot23.subhadeepadhikary.31@gmail.com](mailto:iot23.subhadeepadhikary.31@gmail.com)
 
 💼 LinkedIn
 
-https://www.linkedin.com/in/subhadeepadhikary
-
-🌐 Portfolio
-
-https://subhadeep1357.github.io/my-portfolio/
+[linkedin.com/in/subhadeepadhikary](https://www.linkedin.com/in/subhadeepadhikary)
 
 ---
 
@@ -102,4 +99,4 @@ If you found this project useful, please consider giving it a ⭐ on GitHub.
 
 This project is available for learning and personal inspiration.
 
-© 2026 Subhadeep Adhikary. All rights reserved.
+© 2026–Present Subhadeep Adhikary. All rights reserved.

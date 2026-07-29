@@ -3,15 +3,32 @@
 
 <head>
     <!-- ==========================
-         Meta Tags
+         Basic Meta Tags
     =========================== -->
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Portfolio of Subhadeep Adhikary, Computer Science student, Python Developer, and Web Developer showcasing projects, skills, and resume.">
+        content="Official portfolio of Subhadeep Adhikary, Computer Science Engineering student, Python Developer, Web Developer, and Software Engineer showcasing projects, skills, resume, and contact information.">
 
+    <meta name="keywords"
+        content="Subhadeep Adhikary, Portfolio, Python Developer, Web Developer, Software Engineer, HTML, CSS, JavaScript, GitHub Portfolio">
+
+    <meta name="author" content="Subhadeep Adhikary">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="language" content="English">
+
+    <!-- ==========================
+         Canonical URL
+    =========================== -->
+    <link rel="canonical" href="https://subhadeep1357.github.io/my-portfolio/">
+
+    <!-- ==========================
+         Page Title
+    =========================== -->
     <title>Subhadeep Adhikary | Software Engineer Portfolio</title>
 
     <!-- ==========================
@@ -30,422 +47,420 @@
 
 </head>
 
-<body>
+<!-- =================== Header ===================== -->
+<header>
+    <nav>
 
-    <!-- =================== Header ===================== -->
-    <header>
-        <nav>
-
-            <!-- Logo -->
-            <div class="logo">
-                <a href="#home">
-                    <img id="logo" src="image/signature-black.png" alt="Subhadeep Logo">
-                </a>
-            </div>
-
-            <!-- Navigation Menu -->
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-
-                <li>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                        <img id="theme-icon" src="icons/bulb-on.png" alt="Theme Toggle">
-                    </button>
-                </li>
-
-            </ul>
-
-        </nav>
-    </header>
-
-    <!-- ================= HOME ================= -->
-
-    <section id="home" class="hidden">
-
-        <div class="hero">
-
-            <div class="hero-content">
-
-                <p class="intro">Hello, I'm</p>
-
-                <h1>Subhadeep Adhikary</h1>
-
-                <h2>Python Developer • Web Developer</h2>
-
-                <p class="description">
-                    Passionate Computer Science student dedicated to building
-                    responsive websites and practical Python applications.
-                    I enjoy solving real-world problems through clean,
-                    efficient, and modern code.
-                </p>
-
-                <div class="buttons">
-
-                    <a href="#projects" class="btn btn-outline">
-                        View Projects
-                    </a>
-
-                    <a href="resume/resume.pdf" class="btn btn-outline" download>
-                        Download CV
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="hero-image">
-                <img src="image/profile.jpeg" alt="Subhadeep Adhikary">
-            </div>
-
-        </div> <!-- End of .hero -->
-
-    </section>
-
-    <!-- ================= ABOUT ================= -->
-    <section id="about">
-
-        <div class="about-container hidden">
-
-            <h2 class="section-title">About Me</h2>
-
-            <div class="about-grid">
-
-                <div class="about-card">
-                    <h3>My Journey</h3>
-
-                    <p>
-                        I am currently pursuing a B.Tech in Computer Science and
-                        Engineering. My programming journey started with curiosity
-                        and gradually became a passion for creating responsive
-                        websites and practical software applications.
-                    </p>
-                </div>
-
-                <div class="about-card">
-                    <h3>My Goals</h3>
-
-                    <p>
-                        My goal is to become a Software Engineer and continuously
-                        improve my programming, web development, and problem-solving
-                        skills while building meaningful projects.
-                    </p>
-                </div>
-
-                <div class="about-card">
-                    <h3>Education</h3>
-
-                    <p>
-                        🎓 B.Tech in CSE(IOT CS BCT)<br>
-                        Asansol Engineering College<br>
-                        MAKAUT University
-                    </p>
-                </div>
-
-                <div class="about-card">
-                    <h3>Hobbies</h3>
-
-                    <p>
-                        💻 Coding<br>
-                        📚 Learning New Technologies<br>
-                        🎵 Listening to Music<br>
-                        🧩 Solving Programming Problems
-                    </p>
-                </div>
-
-            </div>
-
+        <!-- Logo -->
+        <div class="logo">
+            <a href="#home">
+                <img id="logo" src="image/signature-black.png" alt="Subhadeep Logo">
+            </a>
         </div>
 
-    </section>
+        <!-- Navigation Menu -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
 
-    <!-- ================= SKILLS ================= -->
+            <li>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <img id="theme-icon" src="icons/bulb-on.png" alt="Theme Toggle">
+                </button>
+            </li>
 
-    <section id="skills">
+        </ul>
 
-        <div class="skills-container hidden">
+    </nav>
+</header>
 
-            <h2 class="section-title">My Skills & Technologies</h2>
+<!-- ================= HOME ================= -->
 
-            <div class="skills-grid">
+<section id="home" class="hidden">
 
-                <div class="skill-card">
-                    <img src="icons/python.png" alt="Python">
-                    <h3>Python</h3>
-                    <p>Automation, OOP & Problem Solving</p>
-                </div>
+    <div class="hero">
 
-                <div class="skill-card">
-                    <img src="icons/html.png" alt="HTML5">
-                    <h3>HTML5</h3>
-                    <p>Semantic & Responsive Layouts</p>
-                </div>
+        <div class="hero-content">
 
-                <div class="skill-card">
-                    <img src="icons/css.png" alt="CSS3">
-                    <h3>CSS3</h3>
-                    <p>Flexbox, Grid & Animations</p>
-                </div>
+            <p class="intro">Hello, I'm</p>
 
-                <div class="skill-card">
-                    <img src="icons/javascript.png" alt="JavaScript">
-                    <h3>JavaScript</h3>
-                    <p>DOM Manipulation & ES6</p>
-                </div>
+            <h1>Subhadeep Adhikary</h1>
 
-                <div class="skill-card">
-                    <img src="icons/c.png" alt="C Programming">
-                    <h3>C Programming</h3>
-                    <p>Logic Building & DSA</p>
-                </div>
+            <h2>Python Developer • Web Developer</h2>
 
-                <div class="skill-card">
-                    <img src="icons/sql.png" alt="SQL">
-                    <h3>SQL</h3>
-                    <p>Database Design & Queries</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= PROJECTS ================= -->
-
-    <section id="projects">
-
-        <div class="projects-container hidden">
-
-            <h2 class="section-title">My Projects</h2>
-
-            <div class="project-filter">
-
-                <button class="active" data-filter="all">All</button>
-
-                <button data-filter="python">Python</button>
-
-                <button data-filter="web">Web</button>
-
-                <button data-filter="c">C</button>
-
-            </div>
-
-            <div class="projects-grid">
-
-                <!-- Project 1 -->
-
-                <div class="project-card" data-category="python">
-
-                    <img src="image/project1.png" alt="GT Car Racing">
-
-                    <div class="project-content">
-
-                        <h3>GT Car Racing</h3>
-
-                        <p>
-                            A simple car racing game built using Python and Pygame library.
-                        </p>
-
-                        <div class="project-buttons">
-
-                            <a href="#" onclick="return false;">Coming Soon</a>
-                            <a href="https://github.com/yourusername/GT-Car-Racing" target="_blank"
-                                rel="noopener noreferrer">
-                                GitHub
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Project 2 -->
-
-                <div class="project-card" data-category="python">
-
-                    <img src="image/project2.png" alt="Network Packet Sniffer">
-
-                    <div class="project-content">
-
-                        <h3>Network Packet Sniffer</h3>
-
-                        <p>
-                            Network security application for capturing and analyzing network packets.
-                        </p>
-
-                        <div class="project-buttons">
-
-                            <a href="#" onclick="return false;">Coming Soon</a>
-                            <a href="https://github.com/yourusername/Network-Packet-Sniffer" target="_blank"
-                                rel="noopener noreferrer">
-                                GitHub
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Project 3 -->
-
-                <div class="project-card" data-category="c">
-
-                    <img src="image/project3.png" alt="Simple Calculator">
-
-                    <div class="project-content">
-
-                        <h3>Simple Calculator</h3>
-
-                        <p>
-                            A simple calculator application built using
-                            C programming language.
-                        </p>
-
-                        <div class="project-buttons">
-
-                            <a href="#" onclick="return false;">Coming Soon</a>
-                            <a href="https://github.com/yourusername/Simple-Calculator" target="_blank"
-                                rel="noopener noreferrer">
-                                GitHub
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= RESUME ================= -->
-
-    <section id="resume">
-
-        <div class="resume-container hidden">
-
-            <h2 class="section-title">Resume</h2>
-
-            <div class="resume-card">
-
-                <img src="icons/resume.jpg" alt="Resume">
-
-                <h3>Resume & CV</h3>
-
-                <p>
-                    Download my resume to know more about my education,
-                    technical skills, projects and achievements.
-                </p>
-
-                <a href="resume/resume.pdf" class="btn btn-outline" download>
-                    Download Resume
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= CONTACT ================= -->
-
-    <section id="contact">
-
-        <div class="contact-container hidden">
-
-            <h2 class="section-title">Contact Me</h2>
-
-            <div class="contact-content">
-
-                <!-- Left Card -->
-
-                <div class="contact-info">
-
-                    <h3>Let's Connect</h3>
-
-                    <p>
-                        Looking for internship opportunities and exciting projects.
-                        Feel free to reach out anytime.
-                    </p>
-
-                    <div class="contact-item">
-                        <strong>Email</strong>
-                        <p>iot23.subhadeepadhikary.31@gmail.com</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <strong>GitHub</strong>
-                        <p>https://github.com/SuBhAdEeP1357</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <strong>Location</strong>
-                        <p>Asansol, West Bengal, India</p>
-                    </div>
-
-                </div>
-
-                <!-- Right Card -->
-
-                <form class="contact-form" action="#" method="post">
-
-                    <input type="text" placeholder="Your Name" required>
-
-                    <input type="email" placeholder="Your Email" required>
-
-                    <input type="text" placeholder="Subject" required>
-
-                    <textarea placeholder="Write your message here..." required></textarea>
-
-                    <button type="submit" class="btn btn-outline">
-                        Send Message
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="footer-container">
-
-            <div class="footer-social">
-
-                <a href="https://github.com/SuBhAdEeP1357" target="_blank" rel="noopener noreferrer">GitHub</a>
-
-                <a href="https://www.linkedin.com/in/subhadeepadhikary" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a>
-
-                <a href="https://www.instagram.com/subhadeepadhikaryofficial" target="_blank"
-                    rel="noopener noreferrer">Instagram</a>
-
-            </div>
-
-            <p class="copyright">
-                © 2026-Present Subhadeep Adhikary. All Rights Reserved.
+            <p class="description">
+                Passionate Computer Science student dedicated to building
+                responsive websites and practical Python applications.
+                I enjoy solving real-world problems through clean,
+                efficient, and modern code.
             </p>
 
+            <div class="buttons">
+
+                <a href="#projects" class="btn btn-outline">
+                    View Projects
+                </a>
+
+                <a href="resume/resume.pdf" class="btn btn-outline" download>
+                    Download CV
+                </a>
+
+            </div>
+
         </div>
 
-    </footer>
+        <div class="hero-image">
+            <img src="image/profile.jpeg" alt="Subhadeep Adhikary">
+        </div>
 
-    <script src="script.js"></script>
+    </div> <!-- End of .hero -->
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+
+    <div class="about-container hidden">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+                <h3>My Journey</h3>
+
+                <p>
+                    I am currently pursuing a B.Tech in Computer Science and
+                    Engineering. My programming journey started with curiosity
+                    and gradually became a passion for creating responsive
+                    websites and practical software applications.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h3>My Goals</h3>
+
+                <p>
+                    My goal is to become a Software Engineer and continuously
+                    improve my programming, web development, and problem-solving
+                    skills while building meaningful projects.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h3>Education</h3>
+
+                <p>
+                    🎓 B.Tech in CSE(IOT CS BCT)<br>
+                    Asansol Engineering College<br>
+                    MAKAUT University
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h3>Hobbies</h3>
+
+                <p>
+                    💻 Coding<br>
+                    📚 Learning New Technologies<br>
+                    🎵 Listening to Music<br>
+                    🧩 Solving Programming Problems
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+    <div class="skills-container hidden">
+
+        <h2 class="section-title">My Skills & Technologies</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <img src="icons/python.png" alt="Python">
+                <h3>Python</h3>
+                <p>Automation, OOP & Problem Solving</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="icons/html.png" alt="HTML5">
+                <h3>HTML5</h3>
+                <p>Semantic & Responsive Layouts</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="icons/css.png" alt="CSS3">
+                <h3>CSS3</h3>
+                <p>Flexbox, Grid & Animations</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="icons/javascript.png" alt="JavaScript">
+                <h3>JavaScript</h3>
+                <p>DOM Manipulation & ES6</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="icons/c.png" alt="C Programming">
+                <h3>C Programming</h3>
+                <p>Logic Building & DSA</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="icons/sql.png" alt="SQL">
+                <h3>SQL</h3>
+                <p>Database Design & Queries</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+    <div class="projects-container hidden">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="project-filter">
+
+            <button class="active" data-filter="all">All</button>
+
+            <button data-filter="python">Python</button>
+
+            <button data-filter="web">Web</button>
+
+            <button data-filter="c">C</button>
+
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+
+            <div class="project-card" data-category="python">
+
+                <img src="image/project1.png" alt="GT Car Racing">
+
+                <div class="project-content">
+
+                    <h3>GT Car Racing</h3>
+
+                    <p>
+                        A simple car racing game built using Python and Pygame library.
+                    </p>
+
+                    <div class="project-buttons">
+
+                        <a href="#" onclick="return false;">Coming Soon</a>
+                        <a href="https://github.com/yourusername/GT-Car-Racing" target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Project 2 -->
+
+            <div class="project-card" data-category="python">
+
+                <img src="image/project2.png" alt="Network Packet Sniffer">
+
+                <div class="project-content">
+
+                    <h3>Network Packet Sniffer</h3>
+
+                    <p>
+                        Network security application for capturing and analyzing network packets.
+                    </p>
+
+                    <div class="project-buttons">
+
+                        <a href="#" onclick="return false;">Coming Soon</a>
+                        <a href="https://github.com/yourusername/Network-Packet-Sniffer" target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Project 3 -->
+
+            <div class="project-card" data-category="c">
+
+                <img src="image/project3.png" alt="Simple Calculator">
+
+                <div class="project-content">
+
+                    <h3>Simple Calculator</h3>
+
+                    <p>
+                        A simple calculator application built using
+                        C programming language.
+                    </p>
+
+                    <div class="project-buttons">
+
+                        <a href="#" onclick="return false;">Coming Soon</a>
+                        <a href="https://github.com/yourusername/Simple-Calculator" target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= RESUME ================= -->
+
+<section id="resume">
+
+    <div class="resume-container hidden">
+
+        <h2 class="section-title">Resume</h2>
+
+        <div class="resume-card">
+
+            <img src="icons/resume.jpg" alt="Resume">
+
+            <h3>Resume & CV</h3>
+
+            <p>
+                Download my resume to know more about my education,
+                technical skills, projects and achievements.
+            </p>
+
+            <a href="resume/resume.pdf" class="btn btn-outline" download>
+                Download Resume
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="contact-container hidden">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-content">
+
+            <!-- Left Card -->
+
+            <div class="contact-info">
+
+                <h3>Let's Connect</h3>
+
+                <p>
+                    Looking for internship opportunities and exciting projects.
+                    Feel free to reach out anytime.
+                </p>
+
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <p>iot23.subhadeepadhikary.31@gmail.com</p>
+                </div>
+
+                <div class="contact-item">
+                    <strong>GitHub</strong>
+                    <p>https://github.com/SuBhAdEeP1357</p>
+                </div>
+
+                <div class="contact-item">
+                    <strong>Location</strong>
+                    <p>Asansol, West Bengal, India</p>
+                </div>
+
+            </div>
+
+            <!-- Right Card -->
+
+            <form class="contact-form" action="#" method="post">
+
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+                <input type="text" placeholder="Subject" required>
+
+                <textarea placeholder="Write your message here..." required></textarea>
+
+                <button type="submit" class="btn btn-outline">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-social">
+
+            <a href="https://github.com/SuBhAdEeP1357" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            <a href="https://www.linkedin.com/in/subhadeepadhikary" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+
+            <a href="https://www.instagram.com/subhadeepadhikaryofficial" target="_blank"
+                rel="noopener noreferrer">Instagram</a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026-Present Subhadeep Adhikary. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 

@@ -306,7 +306,7 @@ nav ul li a:hover::after {
 
 #home {
 
-    min-height: 100vh;
+    min-height: 100svh;
 
     display: flex;
     align-items: center;

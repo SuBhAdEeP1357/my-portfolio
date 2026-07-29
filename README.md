@@ -64,61 +64,35 @@ The website was designed with a clean, modern, and responsive user interface to 
 ```
 my-portfolio/
 │
-├── 📄 index.html                 # Main HTML file
-├── 📄 style.css                  # Main stylesheet
-├── 📄 script.js                  # JavaScript functionality
-├── 📄 README.md                  # Project documentation
-├── 📄 robots.txt                 # SEO (Stage 3)
-├── 📄 sitemap.xml                # SEO (Stage 3)
-├── 📄 favicon.ico                # Browser favicon
-├── 📄 site.webmanifest           # Progressive Web App manifest (optional)
+├── index.html                 # Main HTML file
+├── style.css                  # Main stylesheet
+├── script.js                  # JavaScript functionality
+├── README.md                  # Project documentation
+├── favicon.ico                # Browser tab icon
+├── robots.txt                 # Search engine crawling rules (SEO)
+├── sitemap.xml                # Website sitemap for search engines
+├── site.webmanifest           # Web app manifest (PWA support)
 │
-├── 📂 image/                     # Website images
-│   │
-│   ├── profile.jpeg             # Hero profile image
-│   ├── portfolio-preview.png    # README preview image
-│   ├── project1.png             # GT Car Racing
-│   ├── project2.png             # Packet Sniffer
-│   ├── project3.png             # Calculator
-│   ├── og-image.png             # Open Graph image (Stage 4)
-│   └── favicon-logo.png         # Source favicon/logo
+├── image/                     # Website images
+│   ├── profile.jpeg           # Hero profile photo
+│   ├── portfolio-preview.png  # README preview image
+│   ├── og-image.png           # Social media preview image
+│   ├── project1.png           # GT Car Racing project
+│   ├── project2.png           # Network Packet Sniffer project
+│   └── project3.png           # Simple Calculator project
 │
-├── 📂 icons/                     # Icons & logos
-│   │
-│   ├── bulb.gif                 # Theme ON icon
-│   ├── bulb-off.gif             # Theme OFF icon
-│   ├── github.svg
-│   ├── linkedin.svg
-│   ├── email.svg
-│   ├── signature-black.png
-│   └── signature-white.png
+├── icons/                     # Icons and branding assets
+│   ├── bulb.gif               # Light mode toggle icon
+│   ├── bulb-off.gif           # Dark mode toggle icon
+│   ├── signature-black.png    # Logo for light theme
+│   └── signature-white.png    # Logo for dark theme
 │
-├── 📂 resume/
-│   │
-│   └── Resume.pdf               # Downloadable resume
+├── resume/                    # Resume files
+│   └── Resume.pdf             # Downloadable resume
 │
-├── 📂 css/                       # (Future expansion)
-│   │
-│   ├── animations.css
-│   ├── responsive.css
-│   └── variables.css
-│
-├── 📂 js/                        # (Future expansion)
-│   │
-│   ├── theme.js
-│   ├── navigation.js
-│   ├── filter.js
-│   └── animations.js
-│
-├── 📂 assets/                    # Future assets
-│   │
-│   ├── fonts/
-│   └── videos/
-│
-└── 📂 .github/
-    │
+└── .github/                   # GitHub configuration
     └── workflows/
-        └── deploy.yml           # GitHub Actions (optional)
+        └── deploy.yml         # GitHub Actions deployment workflow
 ```
 
 ---

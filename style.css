@@ -941,6 +941,23 @@ nav ul li a:hover::after {
     align-self: center;
 }
 
+/* ==========================
+   Contact Links
+========================== */
+
+.contact-item a {
+    color: inherit;
+    /* Same color as surrounding text */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
 /*=========================
          FOOTER
 =========================*/
@@ -974,12 +991,6 @@ footer {
     color: var(--footer-text);
     font-size: 15px;
 }
-
-/*=========================
-      SECTION SETTINGS
-=========================*/
-
-
 
 /*=========================
      SCROLL ANIMATION

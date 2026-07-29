@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio Website
 
-Welcome! I built this clean and responsive portfolio website using **HTML**, **CSS**, and **JavaScript**. It’s a space to share my developer journey, showcase my latest projects and make it easy for us to connect.
+Welcome! I built my portfolio website using **HTML**, **CSS**, and **JavaScript**. It’s a space to share my developer journey, showcase my latest projects and make it easy for us to connect.
 
 ---
 
@@ -64,13 +64,61 @@ The website was designed with a clean, modern, and responsive user interface to 
 ```
 my-portfolio/
 │
-├── image/
-├── icons/
-├── resume/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+├── 📄 index.html                 # Main HTML file
+├── 📄 style.css                  # Main stylesheet
+├── 📄 script.js                  # JavaScript functionality
+├── 📄 README.md                  # Project documentation
+├── 📄 robots.txt                 # SEO (Stage 3)
+├── 📄 sitemap.xml                # SEO (Stage 3)
+├── 📄 favicon.ico                # Browser favicon
+├── 📄 site.webmanifest           # Progressive Web App manifest (optional)
+│
+├── 📂 image/                     # Website images
+│   │
+│   ├── profile.jpeg             # Hero profile image
+│   ├── portfolio-preview.png    # README preview image
+│   ├── project1.png             # GT Car Racing
+│   ├── project2.png             # Packet Sniffer
+│   ├── project3.png             # Calculator
+│   ├── og-image.png             # Open Graph image (Stage 4)
+│   └── favicon-logo.png         # Source favicon/logo
+│
+├── 📂 icons/                     # Icons & logos
+│   │
+│   ├── bulb.gif                 # Theme ON icon
+│   ├── bulb-off.gif             # Theme OFF icon
+│   ├── github.svg
+│   ├── linkedin.svg
+│   ├── email.svg
+│   ├── signature-black.png
+│   └── signature-white.png
+│
+├── 📂 resume/
+│   │
+│   └── Resume.pdf               # Downloadable resume
+│
+├── 📂 css/                       # (Future expansion)
+│   │
+│   ├── animations.css
+│   ├── responsive.css
+│   └── variables.css
+│
+├── 📂 js/                        # (Future expansion)
+│   │
+│   ├── theme.js
+│   ├── navigation.js
+│   ├── filter.js
+│   └── animations.js
+│
+├── 📂 assets/                    # Future assets
+│   │
+│   ├── fonts/
+│   └── videos/
+│
+└── 📂 .github/
+    │
+    └── workflows/
+        └── deploy.yml           # GitHub Actions (optional)
 ```
 
 ---

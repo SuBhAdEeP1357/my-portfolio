@@ -1,6 +1,6 @@
-# 🌐 My Personal Portfolio Website
+# 🌐 Personal Portfolio Website
 
-Welcome! This portfolio is a clean, modern, and responsive space built with **HTML**, **CSS**, and **JavaScript** to highlight my journey as a developer, showcase my recent projects, and make connecting effortless.
+Welcome! I built this clean and responsive portfolio website using **HTML**, **CSS**, and **JavaScript**. It’s a space to share my developer journey, showcase my latest projects and make it easy for us to connect.
 
 ---
 

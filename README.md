@@ -1,50 +1,56 @@
-# 🌐 Personal Portfolio Website
+<p align="center">
+  <img src="image/portfolio-preview.png" alt="Subhadeep Adhikary Portfolio" width="100%">
+</p>
 
-Welcome! I built my portfolio website using **HTML**, **CSS**, and **JavaScript**. It’s a space to share my developer journey, showcase my latest projects and make it easy for us to connect.
+<h1 align="center">
+  🌐 Personal Portfolio Website
+</h1>
+
+<p align="center">
+  Modern • Responsive • SEO Optimized • PWA Enabled
+</p>
 
 ---
 
-## 📸 Portfolio Preview
-
-<p align="center">
-  <img src="image/portfolio-preview.png" alt="Portfolio Preview" width="100%">
-</p>
+A modern, responsive portfolio website built using **HTML**, **CSS**, and **JavaScript** to showcase my projects, technical skills, resume, and contact information.
 
 ---
 
 ## 🚀 Live Demo
 
-🌐 **Website:**
+🌐 **Live Website**
 
-[Visit My Portfolio](https://subhadeep1357.github.io/my-portfolio/)
+👉 **[Visit My Portfolio](https://subhadeep1357.github.io/my-portfolio/)**
 
 ---
 
 ## 👨‍💻 About
 
-Hello! I'm **Subhadeep Adhikary**, a passionate Computer Science and Engineering student at **Asansol Engineering College**, dedicated to building responsive web applications and continuously improving my software development skills.
+Hello! I'm **Subhadeep Adhikary**, a passionate **Computer Science and Engineering** student at **Asansol Engineering College**, dedicated to building responsive web applications and continuously improving my software development skills.
 
-This portfolio highlights my:
+This portfolio showcases my:
 
 - 💼 Projects
 - 💻 Technical Skills
 - 📄 Resume
 - 📬 Contact Information
 
-The website was designed with a clean, modern, and responsive user interface to provide a professional online presence.
+The website is designed with a clean, modern, and responsive user interface to provide a professional online presence.
 
 ---
 
 ## ✨ Features
 
-- Responsive Design
-- Dual Theme (Light & Dark Mode)
-- Smooth Scrolling
-- Animated Sections
-- Download Resume
-- Project Showcase
-- Contact Section
-- Glassmorphism UI
+- 📱 Fully Responsive Design
+- 🌙 Light & Dark Mode
+- ⚡ Fast Loading
+- 🔍 SEO Optimized
+- 📄 Downloadable Resume
+- 🖼️ Project Showcase
+- 📬 Contact Section
+- 🌐 Progressive Web App (PWA)
+- 🔗 Open Graph & Social Media Preview
+- 🎨 Modern Glassmorphism UI
 
 ---
 
@@ -52,47 +58,51 @@ The website was designed with a clean, modern, and responsive user interface to 
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (ES6)
 - Git
 - GitHub
 - GitHub Pages
+- Progressive Web App (PWA)
+- Google Search Console
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 my-portfolio/
 │
-├── index.html                 # Main HTML file
-├── style.css                  # Main stylesheet
-├── script.js                  # JavaScript functionality
-├── README.md                  # Project documentation
-├── favicon.ico                # Browser tab icon
-├── robots.txt                 # Search engine crawling rules (SEO)
-├── sitemap.xml                # Website sitemap for search engines
-├── site.webmanifest           # Web app manifest (PWA support)
+├── image/
+│   ├── profile.jpeg
+│   ├── portfolio-preview.png
+│   ├── og-image.png
+│   ├── project1.png
+│   ├── project2.png
+│   └── project3.png
 │
-├── image/                     # Website images
-│   ├── profile.jpeg           # Hero profile photo
-│   ├── portfolio-preview.png  # README preview image
-│   ├── og-image.png           # Social media preview image
-│   ├── project1.png           # GT Car Racing project
-│   ├── project2.png           # Network Packet Sniffer project
-│   └── project3.png           # Simple Calculator project
+├── icons/
+│   ├── bulb.gif
+│   ├── bulb-off.gif
+│   ├── signature-black.png
+│   └── signature-white.png
 │
-├── icons/                     # Icons and branding assets
-│   ├── bulb.gif               # Light mode toggle icon
-│   ├── bulb-off.gif           # Dark mode toggle icon
-│   ├── signature-black.png    # Logo for light theme
-│   └── signature-white.png    # Logo for dark theme
+├── resume/
+│   └── Resume.pdf
 │
-├── resume/                    # Resume files
-│   └── Resume.pdf             # Downloadable resume
-│
-└── .github/                   # GitHub configuration
-    └── workflows/
-        └── deploy.yml         # GitHub Actions deployment workflow
+├── index.html
+├── style.css
+├── script.js
+├── robots.txt
+├── sitemap.xml
+├── site.webmanifest
+├── favicon.ico
+├── favicon.svg
+├── favicon-96x96.png
+├── apple-touch-icon.png
+├── web-app-manifest-192x192.png
+├── web-app-manifest-512x512.png
+├── LICENSE
+└── README.md
 ```
 
 ---
@@ -101,24 +111,33 @@ my-portfolio/
 
 **Subhadeep Adhikary**
 
-📧 Email
-
+📧 **Email**  
 [iot23.subhadeepadhikary.31@gmail.com](mailto:iot23.subhadeepadhikary.31@gmail.com)
 
-💼 LinkedIn
+💼 **LinkedIn**  
+https://www.linkedin.com/in/subhadeepadhikary
 
-[linkedin.com/in/subhadeepadhikary](https://www.linkedin.com/in/subhadeepadhikary)
+🐙 **GitHub**  
+https://github.com/SuBhAdEeP1357
 
 ---
 
-## ⭐ Repository
+## ⭐ Support
 
 If you found this project useful, please consider giving it a ⭐ on GitHub.
+
+Your support motivates me to build more projects and continuously improve my work.
 
 ---
 
 ## 📄 License
 
-This project is available for learning and personal inspiration.
+This portfolio is licensed under the **Creative Commons Attribution–NoDerivatives 4.0 International (CC BY-ND 4.0)** license.
 
-© 2026–Present Subhadeep Adhikary. All rights reserved.
+**© 2026–Present Subhadeep Adhikary. All rights reserved.**
+
+The source code, design, images, branding, resume, and other assets are provided for portfolio demonstration purposes only.
+
+Redistributing or modifying this work without prior written permission is prohibited.
+
+For complete license terms, please refer to the **LICENSE** file.

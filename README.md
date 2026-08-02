@@ -1,13 +1,14 @@
 <h1 align="center">
-  🌐 Personal Portfolio Website
+🌐 Personal Portfolio Website
 </h1>
 
 <p align="center">
-  Modern • Responsive • SEO Optimized • PWA Enabled
+<b>Subhadeep Adhikary</b><br>
+Software Engineer • Web Developer • Python Developer
 </p>
 
 <p align="center">
-  <img src="image/portfolio-preview.png" alt="Subhadeep Adhikary Portfolio" width="100%">
+Modern • Responsive • SEO Optimized • PWA Enabled
 </p>
 
 ---

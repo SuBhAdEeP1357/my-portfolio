@@ -11,6 +11,10 @@ Software Engineer • Web Developer • Python Developer
 Modern • Responsive • SEO Optimized • PWA Enabled
 </p>
 
+<p align="center">
+  <img src="image/portfolio-preview.png" alt="Subhadeep Adhikary Portfolio" width="100%">
+</p>
+
 ---
 
 A modern, responsive portfolio website built using **HTML**, **CSS**, and **JavaScript** to showcase my projects, technical skills, resume, and contact information.

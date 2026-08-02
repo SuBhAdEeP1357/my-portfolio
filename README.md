@@ -1,13 +1,13 @@
-<p align="center">
-  <img src="image/portfolio-preview.png" alt="Subhadeep Adhikary Portfolio" width="100%">
-</p>
-
 <h1 align="center">
   🌐 Personal Portfolio Website
 </h1>
 
 <p align="center">
   Modern • Responsive • SEO Optimized • PWA Enabled
+</p>
+
+<p align="center">
+  <img src="image/portfolio-preview.png" alt="Subhadeep Adhikary Portfolio" width="100%">
 </p>
 
 ---

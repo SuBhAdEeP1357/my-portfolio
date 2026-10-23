@@ -1,0 +1,736 @@
+#root .credential-archive {
+    --certificate-bg: #000000;
+    --certificate-surface: #030303;
+    --certificate-white: #ffffff;
+    --certificate-muted: rgba(245, 243, 237, 0.72);
+    --certificate-subtle: rgba(245, 243, 237, 0.48);
+    --certificate-gold: var(--color-gold, #d4af37);
+    --certificate-border: rgba(255, 255, 255, 0.1);
+    --certificate-border-hover: rgba(212, 175, 55, 0.42);
+
+    width: 100%;
+    padding: 38px 0 clamp(44px, 5vw, 76px);
+    scroll-margin-top: 88px;
+    background: var(--certificate-bg);
+    color: var(--certificate-white);
+}
+
+#root .credential-archive__container {
+    width: min(1320px, calc(100% - clamp(36px, 10vw, 176px)));
+    margin-inline: auto;
+}
+
+#root .credential-archive__header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: clamp(20px, 2vw, 30px);
+}
+
+#root .credential-archive__title {
+    margin: 0;
+    color: var(--certificate-white);
+}
+
+#root .credential-archive__intro {
+    max-width: 600px;
+    margin: 0;
+    color: var(--certificate-muted);
+    font-family: var(--font-body, "Times New Roman", serif);
+    font-size: var(--text-section-description);
+    line-height: 1.55;
+}
+
+#root .credential-archive__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: clamp(16px, 2vw, 24px);
+}
+
+#root .credential-archive__card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--certificate-border);
+    border-radius: 8px;
+    background: var(--certificate-bg);
+    transition: border-color var(--duration-fast) var(--ease-standard),
+        background-color var(--duration-fast) var(--ease-standard);
+}
+
+#root .credential-archive__media {
+    display: grid;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    place-items: center;
+    border-bottom: 1px solid var(--certificate-border);
+    background: var(--certificate-surface);
+}
+
+#root .credential-archive__preview {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    padding: 0;
+    overflow: hidden;
+    place-items: center;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+#root .credential-archive__preview:focus-visible {
+    outline: 2px solid var(--certificate-gold);
+    outline-offset: -3px;
+}
+
+#root .credential-archive__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    filter: none;
+    transform: none;
+    transition: none;
+}
+
+#root .credential-archive__content {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    padding: clamp(18px, 1.8vw, 26px);
+}
+
+#root .credential-archive__meta {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 8px 16px;
+    margin: 0 0 13px;
+}
+
+#root .credential-archive__meta > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#root .credential-archive__meta dt {
+    color: var(--certificate-gold);
+    font-family: var(--font-ui, Inter, sans-serif);
+    font-size: var(--text-meta);
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    line-height: 1.4;
+}
+
+#root .credential-archive__meta dd {
+    min-width: 0;
+    color: var(--certificate-muted);
+    font-family: var(--font-body, "Times New Roman", serif);
+    font-size: var(--text-body);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+#root .credential-archive__credential-id {
+    grid-column: 1 / -1;
+}
+
+#root .credential-archive__credential-id dd {
+    user-select: text;
+}
+
+#root .credential-archive__card-title {
+    margin: 0;
+    color: var(--certificate-white);
+    font-family: var(--font-body, "Times New Roman", serif);
+    font-size: var(--text-card-title);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.13;
+    overflow-wrap: anywhere;
+}
+
+#root .credential-archive__classification {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 12px 0 0;
+    color: var(--certificate-muted);
+    font-family: var(--font-body, "Times New Roman", serif);
+    font-size: var(--text-body);
+    line-height: 1.5;
+}
+
+#root .credential-archive__classification-category {
+    color: var(--certificate-gold);
+}
+
+#root .credential-archive__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: auto;
+    padding-top: 18px;
+}
+
+#root .credential-archive__actions .portfolio-button {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    border-radius: 7px;
+    font-family: var(--font-ui, Inter, sans-serif);
+    font-size: var(--text-button);
+    font-weight: 600;
+    letter-spacing: 0.075em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color var(--duration-fast) var(--ease-standard),
+        border-color var(--duration-fast) var(--ease-standard),
+        background-color var(--duration-fast) var(--ease-standard),
+        box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+#root .credential-archive__actions .portfolio-button--secondary {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: #000000;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+#root .credential-archive__actions .portfolio-button:focus-visible {
+    outline: 2px solid var(--certificate-gold);
+    outline-offset: 3px;
+}
+
+#root .certificate-modal__panel {
+    display: block;
+    width: min(100%, 1180px);
+    max-height: calc(100svh - 48px);
+    overflow: auto;
+    border: 1px solid var(--certificate-border);
+    border-radius: 8px;
+    background: #000000;
+    color: #ffffff;
+}
+
+#root .certificate-modal__panel:focus {
+    outline: none;
+}
+
+#root .certificate-modal__header {
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+#root .certificate-modal__header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-family: var(--font-body, "Times New Roman", serif);
+    font-size: var(--text-archive-heading);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+#root .certificate-modal__eyebrow {
+    color: var(--certificate-gold);
+    font-family: var(--font-ui, Inter, sans-serif);
+}
+
+#root .certificate-modal__close {
+    display: grid;
+    min-width: 44px;
+    min-height: 44px;
+    flex: 0 0 44px;
+    place-items: center;
+    border: 1px solid var(--certificate-border);
+    border-radius: 6px;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#root .certificate-modal__close:focus-visible {
+    outline: 2px solid var(--certificate-gold);
+    outline-offset: 3px;
+}
+
+#root .certificate-modal__image-frame {
+    display: flex;
+    min-height: 0;
+    align-items: center;
+    justify-content: center;
+    margin: 18px 0;
+    overflow: auto;
+    border: 1px solid var(--certificate-border);
+    border-radius: 4px;
+    background: #030303;
+}
+
+#root .certificate-modal__image-frame img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: min(65svh, 720px);
+    object-fit: contain;
+    object-position: center;
+    filter: none;
+    transform: none;
+    transition: none;
+}
+
+#root .certificate-modal__meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 14px 24px;
+    padding-top: 14px;
+    border-top: 1px solid var(--certificate-border);
+}
+
+#root .certificate-modal__meta > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#root .certificate-modal__meta dt {
+    color: var(--certificate-gold);
+    font-family: var(--font-ui, Inter, sans-serif);
+    font-size: var(--text-meta);
+    font-weight: 600;
+    letter-spacing: 0.13em;
+}
+
+#root .certificate-modal__meta dd {
+    color: var(--certificate-muted);
+    font-family: var(--font-body, "Times New Roman", serif);
+    font-size: var(--text-body);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+#root .certificate-modal__credential-link {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    padding: 0 15px;
+    border-radius: 7px;
+    font-family: var(--font-ui, Inter, sans-serif);
+    font-size: var(--text-button);
+    font-weight: 600;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+}
+
+#root .certificate-modal.certificate-modal--detail {
+    --archive-white: #ffffff;
+    --archive-gold: var(--color-gold, #d4af37);
+    --archive-border-gold: rgba(212, 175, 55, 0.3);
+
+    position: fixed;
+    z-index: calc(var(--z-modal, 1100) + 1);
+    inset: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    padding:
+        max(clamp(10px, 2.4vw, 28px), env(safe-area-inset-top))
+        max(clamp(10px, 2.4vw, 28px), env(safe-area-inset-right))
+        max(clamp(10px, 2.4vw, 28px), env(safe-area-inset-bottom))
+        max(clamp(10px, 2.4vw, 28px), env(safe-area-inset-left));
+    isolation: isolate;
+}
+
+#root .certificate-modal--detail.certificate-modal--closing {
+    pointer-events: none;
+}
+
+#root .certificate-modal--detail .certificate-modal__backdrop {
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#root .certificate-modal--nested-detail .certificate-modal__backdrop {
+    background: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+#root .certificate-modal--detail .certificate-modal__panel {
+    display: flex;
+    width: min(1180px, 100%);
+    height: min(900px, 100%);
+    max-height: 100%;
+    min-height: 0;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+    background: #030303;
+    box-shadow: 0 24px 72px rgba(0, 0, 0, 0.68);
+}
+
+#root .certificate-modal__detail-header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    min-width: 0;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: clamp(16px, 2.2vw, 28px) clamp(18px, 2.8vw, 34px);
+    border-bottom: 1px solid var(--certificate-border);
+    background: #030303;
+}
+
+#root .certificate-modal__detail-heading {
+    min-width: 0;
+}
+
+#root .certificate-modal__detail-heading h2 {
+    margin: 7px 0 0;
+    color: #ffffff;
+    font-family: var(--font-body, "Times New Roman", serif);
+    font-size: clamp(1.25rem, 2.4vw, 1.9rem);
+    font-weight: 400;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+#root .certificate-modal__eyebrow {
+    display: block;
+    font-size: var(--text-meta);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+#root .certificate-modal__detail-close {
+    flex: 0 0 auto;
+}
+
+#root .certificate-modal__detail-content {
+    display: grid;
+    min-height: 0;
+    flex: 1 1 auto;
+    grid-template-rows: minmax(0, 1fr) auto auto;
+    gap: clamp(12px, 1.5vw, 20px);
+    overflow: hidden;
+    padding: clamp(12px, 2.4vw, 30px);
+}
+
+#root .certificate-modal__detail-content .certificate-modal__image-frame {
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    padding: clamp(8px, 1.2vw, 16px);
+    background: #030303;
+}
+
+#root .certificate-modal__detail-content .certificate-modal__image-frame img {
+    display: block;
+    flex: 0 1 auto;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#root .certificate-modal__detail-content .certificate-modal__meta {
+    min-width: 0;
+    margin: 0;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px 24px;
+}
+
+#root .certificate-modal__detail-content .certificate-modal__meta > div:nth-child(2) {
+    align-items: flex-end;
+    text-align: right;
+}
+
+#root .certificate-modal__detail-content .certificate-modal__credential-link {
+    align-self: flex-start;
+    margin-top: 0;
+}
+
+#root .certificate-modal--archive {
+    display: flex;
+}
+
+#root .credential-archive__grid--archive {
+    gap: clamp(16px, 1.8vw, 22px);
+}
+
+@media (max-width: 760px) {
+    #root .credential-archive {
+        padding-bottom: 64px;
+    }
+
+    #root .credential-archive__container {
+        width: min(720px, calc(100% - 32px));
+    }
+
+    #root .credential-archive__header {
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    #root .credential-archive__intro {
+        font-size: var(--text-section-description);
+        line-height: 1.65;
+    }
+
+    #root .credential-archive__grid {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 680px;
+        margin-inline: auto;
+        gap: 18px;
+    }
+
+    #root .credential-archive__content {
+        padding: 18px;
+    }
+
+    #root .credential-archive__meta {
+        gap: 8px 12px;
+    }
+
+    #root .certificate-modal:not(.certificate-modal--archive) {
+        padding: 10px;
+    }
+
+    #root .certificate-modal__panel {
+        max-height: calc(100svh - 20px);
+        padding: 14px;
+    }
+
+    #root .certificate-modal__image-frame img {
+        max-height: 58svh;
+    }
+
+    #root .credential-archive__grid--archive {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    #root .credential-archive__container {
+        width: calc(100% - 28px);
+    }
+
+    #root .credential-archive__content {
+        padding: 16px;
+    }
+
+    #root .credential-archive__meta {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+        gap: 8px 10px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+    #root .credential-archive--mobile .credential-archive__grid--archive {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #root .credential-archive__card:hover,
+    #root .credential-archive__card:focus-within {
+        border-color: var(--certificate-border-hover);
+        background: var(--certificate-surface);
+    }
+
+    #root .credential-archive__actions .portfolio-button:not(:disabled):hover {
+        border-color: rgba(212, 175, 55, 0.65);
+        background: rgba(212, 175, 55, 0.06);
+        color: #ffffff;
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    #root .credential-archive__card:hover,
+    #root .credential-archive__card:focus-within {
+        border-color: var(--certificate-border);
+        background: var(--certificate-bg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #root .credential-archive__card,
+    #root .credential-archive__media img,
+    #root .credential-archive__actions .portfolio-button {
+        transition: none;
+        transform: none;
+    }
+}
+
+#root .certificate-modal {
+    opacity: 0;
+    transition: opacity var(--duration-normal) var(--ease-standard);
+}
+
+#root .certificate-modal--open {
+    opacity: 1;
+}
+
+#root .certificate-modal--closing {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#root .certificate-modal__backdrop {
+    opacity: 0;
+    transition: opacity var(--duration-normal) var(--ease-standard);
+}
+
+#root .certificate-modal--archive .projects-all-modal__backdrop {
+    opacity: 0;
+    transition: opacity var(--duration-normal) var(--ease-standard);
+}
+
+#root .certificate-modal--open .certificate-modal__backdrop,
+#root .certificate-modal--open .projects-all-modal__backdrop {
+    opacity: 1;
+}
+
+#root .certificate-modal__panel,
+#root .certificate-modal--archive .projects-all-modal__panel {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+    transition:
+        opacity var(--duration-normal) var(--ease-standard),
+        transform var(--duration-normal) var(--ease-standard);
+}
+
+#root .certificate-modal--open .certificate-modal__panel,
+#root .certificate-modal--open .projects-all-modal__panel {
+    opacity: 1;
+    transform: none;
+}
+
+#root .certificate-modal--closing .certificate-modal__panel,
+#root .certificate-modal--closing .projects-all-modal__panel {
+    opacity: 0;
+    transform: translateY(8px) scale(0.995);
+}
+
+#root .certificate-modal--archive .projects-all-modal__content {
+    transition:
+        opacity var(--duration-normal) var(--ease-standard),
+        transform var(--duration-normal) var(--ease-standard);
+}
+
+#root .certificate-modal--detail .certificate-modal__panel {
+    opacity: 0;
+    transform: translateY(16px) scale(0.99);
+    transition:
+        opacity var(--duration-normal) var(--ease-standard),
+        transform var(--duration-normal) var(--ease-standard);
+}
+
+#root .certificate-modal--detail.certificate-modal--open .certificate-modal__panel {
+    opacity: 1;
+    transform: none;
+}
+
+#root .certificate-modal--detail.certificate-modal--closing .certificate-modal__panel {
+    opacity: 0;
+    transform: translateY(8px) scale(0.995);
+}
+
+#root .certificate-modal--open .projects-all-modal__content {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #root .certificate-modal,
+    #root .certificate-modal__backdrop,
+    #root .certificate-modal__panel,
+    #root .certificate-modal--archive .projects-all-modal__backdrop,
+    #root .certificate-modal--archive .projects-all-modal__panel,
+    #root .certificate-modal--archive .projects-all-modal__content {
+        transition: none;
+    }
+
+    #root .certificate-modal--detail .certificate-modal__panel {
+        transition: none;
+    }
+}
+
+@media (max-width: 760px) {
+    #root .certificate-modal.certificate-modal--detail {
+        padding:
+            max(10px, env(safe-area-inset-top))
+            max(10px, env(safe-area-inset-right))
+            max(10px, env(safe-area-inset-bottom))
+            max(10px, env(safe-area-inset-left));
+    }
+
+    #root .certificate-modal--detail .certificate-modal__panel {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    #root .certificate-modal__detail-header {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    #root .certificate-modal__detail-heading h2 {
+        font-size: clamp(1.1rem, 5vw, 1.45rem);
+    }
+
+    #root .certificate-modal__detail-close {
+        min-height: 44px;
+    }
+
+    #root .certificate-modal__detail-content {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    #root .certificate-modal__detail-content .certificate-modal__meta {
+        gap: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #root .certificate-modal__detail-content .certificate-modal__meta {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    #root .certificate-modal__detail-content .certificate-modal__meta > div:nth-child(2) {
+        align-items: flex-start;
+        text-align: left;
+    }
+}

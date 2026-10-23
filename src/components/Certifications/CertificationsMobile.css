@@ -1,0 +1,39 @@
+#root .credential-archive--mobile {
+    scroll-margin-top: 72px;
+    padding-block: 28px 64px;
+}
+
+#root .credential-archive--mobile .credential-archive__container {
+    width: min(720px, calc(100% - 32px));
+}
+
+#root .credential-archive--mobile .credential-archive__header {
+    margin-bottom: 24px;
+}
+
+#root .credential-archive--mobile .credential-archive__heading-row {
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#root .credential-archive--mobile .credential-archive__heading-row .project-showcase__view-all {
+    margin-bottom: 0;
+}
+
+#root .credential-archive--mobile .credential-archive__intro {
+    max-width: 560px;
+    font-size: var(--text-section-description);
+    line-height: 1.65;
+}
+
+#root .credential-archive--mobile .credential-archive__content {
+    padding: clamp(18px, 4vw, 24px);
+}
+
+@media (max-width: 400px) {
+    #root .credential-archive--mobile .credential-archive__content {
+        padding: 16px;
+    }
+}
+
+

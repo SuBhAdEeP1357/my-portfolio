@@ -1,0 +1,263 @@
+.hero-mobile {
+    --hero-mobile-gold: #D4AF37;
+    --hero-mobile-white: #ffffff;
+    --hero-mobile-nav-height: 68px;
+    --hero-mobile-gutter: clamp(16px, 4.2vw, 32px);
+    --hero-mobile-content-max: 460px;
+
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding:
+        calc(var(--hero-mobile-nav-height) + env(safe-area-inset-top) + clamp(8px, 1.2svh, 12px))
+        0
+        calc(clamp(20px, 2.2svh, 28px) + env(safe-area-inset-bottom));
+    color: var(--hero-mobile-white);
+    background-color: #000000;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.hero-mobile__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: min(
+        calc(
+            100% - var(--hero-mobile-gutter) - var(--hero-mobile-gutter) -
+                env(safe-area-inset-left) - env(safe-area-inset-right)
+        ),
+        var(--hero-mobile-content-max)
+    );
+    min-width: 0;
+    margin-inline: auto;
+}
+
+.hero-mobile__profile {
+    position: relative;
+    isolation: isolate;
+    flex: 0 0 auto;
+    align-self: center;
+    width: min(36svh, 84vw, 400px, 100%);
+    max-width: 100%;
+    aspect-ratio: 1;
+    margin: 0 auto clamp(10px, 1.5svh, 16px);
+    overflow: hidden;
+}
+
+.hero-mobile__profile::after {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 25%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.4) 42%,
+            rgba(0, 0, 0, 0.82) 76%,
+            #000000 100%);
+    content: "";
+    pointer-events: none;
+}
+
+.hero-mobile__profile-image {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.hero-mobile__intro {
+    width: 100%;
+    min-width: 0;
+}
+
+.hero-mobile__eyebrow {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 0 clamp(8px, 1.4svh, 13px);
+    color: #ffffff;
+    font-family: var(--font-hero-intro);
+    font-size: clamp(1.4rem, 5.5vw, 1.65rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: normal;
+}
+
+.hero-mobile__identity {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+    gap: clamp(8px, 1.5svh, 16px);
+}
+
+.hero-mobile__title {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    color: #ffffff;
+    font-family: var(--font-hero-name);
+    font-size: clamp(1.65rem, 7.3vw, 2.375rem);
+    font-weight: 600;
+    line-height: 1.02;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    overflow-wrap: normal;
+}
+
+.hero-mobile__title>span {
+    display: inline;
+    white-space: normal;
+}
+
+.hero-mobile__title-accent {
+    color: var(--hero-mobile-gold);
+    opacity: 1;
+    filter: none;
+    mix-blend-mode: normal;
+}
+
+.hero-mobile__subtitle {
+    width: 100%;
+    max-width: 100%;
+    color: #ffffff;
+    font-family: var(--font-hero-meta);
+    font-size: clamp(0.875rem, 2.6vw, 1rem);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.025em;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: normal;
+}
+
+.hero-mobile__subtitle>span {
+    display: inline;
+    max-width: 100%;
+}
+
+.hero-mobile__description {
+    width: 100%;
+    max-width: 46ch;
+    margin: clamp(14px, 2.4svh, 24px) 0 0;
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1.7vw, 1.125rem);
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+.hero-mobile__actions {
+    --hero-mobile-action-gap: clamp(8px, 2.4vw, 12px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: var(--hero-mobile-action-gap);
+    margin: clamp(18px, 3svh, 32px) auto 0;
+}
+
+#root .hero-mobile .hero-mobile__actions>.hero-mobile__button {
+    display: flex;
+    flex: 1 1 0;
+    min-width: 0;
+    height: clamp(48px, 4.8svh, 52px);
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding-inline: clamp(8px, 2vw, 12px);
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: var(--text-button);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.055em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: none;
+    opacity: 1;
+    filter: none;
+    mix-blend-mode: normal;
+}
+
+#root .hero-mobile .hero-mobile__button--primary {
+    border-color: var(--hero-mobile-gold);
+    background-color: var(--hero-mobile-gold);
+    background-image: none;
+    color: #000000;
+}
+
+#root .hero-mobile .hero-mobile__button--secondary {
+    border-color: rgba(212, 175, 55, 0.5);
+    background-color: #000000;
+    background-image: none;
+    color: #ffffff;
+}
+
+#root .hero-mobile .hero-mobile__button:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 4px;
+}
+
+@media (max-height: 680px) and (orientation: portrait) {
+    .hero-mobile {
+        padding-top: calc(var(--hero-mobile-nav-height) + env(safe-area-inset-top) + 4px);
+        padding-bottom: calc(12px + env(safe-area-inset-bottom));
+    }
+
+    .hero-mobile__profile {
+        width: min(25svh, 180px, 100%);
+        margin-bottom: 8px;
+    }
+
+    .hero-mobile__eyebrow {
+        margin-bottom: 6px;
+    }
+
+    .hero-mobile__identity {
+        gap: 7px;
+    }
+
+    .hero-mobile__description {
+        margin-top: 10px;
+        line-height: 1.45;
+    }
+
+    .hero-mobile__actions {
+        margin-top: 14px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-mobile__profile,
+    .hero-mobile__profile-image,
+    .hero-mobile__eyebrow,
+    .hero-mobile__title,
+    .hero-mobile__subtitle,
+    .hero-mobile__description,
+    .hero-mobile__actions {
+        animation-duration: 0.01ms;
+        transition-duration: 0.01ms;
+    }
+}

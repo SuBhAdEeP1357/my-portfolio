@@ -1,0 +1,181 @@
+.about-mobile {
+    --about-mobile-rule: rgba(255, 255, 255, 0.14);
+
+    width: 100%;
+    padding: clamp(24px, 3vh, 32px) 0 clamp(36px, 4vh, 48px);
+    scroll-margin-top: calc(68px + env(safe-area-inset-top) + 10px);
+    color: var(--color-white);
+    background: #000000;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.about-mobile__layout {
+    display: grid;
+    gap: 18px;
+    width: min(calc(100% - 32px), 620px);
+    min-width: 0;
+    margin-inline: auto;
+}
+
+.about-mobile__heading,
+.about-mobile__academic {
+    min-width: 0;
+}
+
+.about-mobile__section-title {
+    margin: 0;
+    color: #ffffff;
+}
+
+.about-mobile__section-title-accent {
+    color: var(--color-gold);
+}
+
+.about-mobile__portrait {
+    width: min(61vw, 216px, 100%);
+    justify-self: center;
+    margin: 0;
+}
+
+.about-mobile__portrait-surface {
+    overflow: hidden;
+    border: 1px solid var(--about-mobile-rule);
+    border-radius: 3px;
+    padding: 5px;
+    background: #000000;
+}
+
+.about-mobile__portrait-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.about-mobile__description {
+    max-width: 58ch;
+    color: var(--color-white-soft);
+    font-family: var(--font-body, "Times New Roman", Times, serif);
+    font-size: var(--text-section-description);
+    line-height: 1.58;
+}
+
+.about-mobile__academic {
+    width: 100%;
+}
+
+.about-mobile__academic-title {
+    margin: 0 0 8px;
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: var(--text-subheading);
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.about-mobile__academic-list {
+    margin: 0;
+    padding: 0;
+}
+
+.about-mobile__academic-row {
+    display: grid;
+    gap: 3px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--about-mobile-rule);
+}
+
+.about-mobile__academic-row:last-child {
+    border-bottom: 0;
+}
+
+.about-mobile__academic-row dt {
+    color: var(--color-text-muted);
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 550;
+    line-height: 1.4;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+}
+
+.about-mobile__academic-row dd {
+    min-width: 0;
+    margin: 0;
+    color: var(--color-white);
+    font-family: var(--font-body, "Times New Roman", Times, serif);
+    font-size: var(--text-body);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+@media (min-width: 600px) {
+    .about-mobile__layout {
+        width: min(calc(100% - 56px), 900px);
+        gap: 20px;
+    }
+
+    .about-mobile__portrait {
+        width: min(38vw, 270px, 100%);
+    }
+
+}
+
+@media (min-width: 760px) {
+    .about-mobile__layout {
+        grid-template-columns: minmax(230px, 0.82fr) minmax(0, 1.18fr);
+        grid-template-areas:
+            "portrait heading"
+            "portrait description"
+            "portrait academic";
+        align-items: center;
+        column-gap: clamp(32px, 5vw, 56px);
+        row-gap: 16px;
+    }
+
+    .about-mobile__heading {
+        grid-area: heading;
+    }
+
+    .about-mobile__portrait {
+        grid-area: portrait;
+        width: min(90%, 324px);
+    }
+
+    .about-mobile__description {
+        grid-area: description;
+    }
+
+    .about-mobile__academic {
+        grid-area: academic;
+    }
+
+    .about-mobile__academic-row {
+        grid-template-columns: minmax(118px, 0.72fr) minmax(0, 1.28fr);
+        align-items: baseline;
+        gap: 12px;
+        padding: 9px 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .about-mobile__layout {
+        width: calc(100% - 28px);
+        gap: 16px;
+    }
+
+    .about-mobile__portrait {
+        width: min(60vw, 198px, 100%);
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-mobile__portrait-image {
+        transition: none;
+    }
+}

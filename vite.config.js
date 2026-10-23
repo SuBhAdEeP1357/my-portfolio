@@ -1,16 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig(({ command }) => ({
-// GitHub Pages uses a repository subpath.
-// Vercel serves the application from the domain root.
-base: command === "build"
-? (process.env.GITHUB_PAGES === "true" ? "/my-portfolio/" : "/")
-: "/",
-
-```
+export default defineConfig({
+base: "/my-portfolio/",
 plugins: [react()],
 
+```
 server: {
     host: "127.0.0.1",
     port: 5173,
@@ -46,4 +41,4 @@ resolve: {
 },
 ```
 
-}));
+});

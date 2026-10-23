@@ -1,0 +1,37 @@
+Subhadeep Adhikary Personal Portfolio
+License
+
+Copyright (c) 2026 Subhadeep Adhikary
+
+Scope
+
+This repository contains software source code as well as personal portfolio content and media. The permissions below apply to these categories separately.
+
+“Source Code” means the website implementation code and supporting project configuration. It excludes Portfolio Assets and Personal Content and all Third-Party Materials described below.
+
+“Portfolio Assets and Personal Content” means personal photographs and profile images, the SA logo and personal branding, certificates and certificate scans, portfolio and project artwork, project thumbnails and screenshots, social-preview artwork, personal audio, portfolio copy, and other original media or personal content, to the extent those rights are owned or controlled by Subhadeep Adhikary.
+
+Some source files may contain both code and Portfolio Assets and Personal Content, such as project descriptions or personal details. In those cases, the MIT License applies only to the code portion; the embedded content remains reserved under Section 2.
+
+1. Source Code — MIT License
+
+The MIT License below applies only to the Source Code. In the text below, “Software” means only that Source Code. It does not include Portfolio Assets and Personal Content or Third-Party Materials.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Software, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+2. Portfolio Assets and Personal Content — All Rights Reserved
+
+All rights in Portfolio Assets and Personal Content are reserved by their respective rights holders. No permission is granted by the MIT License above to reproduce, redistribute, publish, modify, create derivative works from, publicly display, or use these materials commercially. Obtain prior written permission from the applicable rights holder before using them, except where applicable law provides otherwise.
+
+3. Third-Party Materials
+
+Third-party software libraries, trademarks, logos, fonts, and other external materials remain subject to their respective owners’ licenses, terms, and rights. Their inclusion in this repository does not transfer ownership or grant permission to reuse them beyond those terms. Review the applicable notices and license files for each item.
+
+4. Disclaimer
+
+The Source Code is provided under the MIT terms above and without warranty. No rights in Portfolio Assets and Personal Content or Third-Party Materials are granted except as stated by their applicable rights holders.
+

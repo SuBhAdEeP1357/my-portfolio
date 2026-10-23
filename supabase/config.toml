@@ -1,0 +1,5 @@
+project_id = "subhadeep-portfolio"
+
+[functions.submit-contact]
+# The function's @supabase/server wrapper validates the publishable key.
+verify_jwt = false

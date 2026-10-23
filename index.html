@@ -3,7 +3,7 @@
 
 <head>
      <!-- =========================================================
-         DOCUMENT
+         DOCUMENT CONFIGURATION
     ========================================================== -->
      <meta charset="UTF-8" />
 
@@ -21,7 +21,7 @@
      </title>
 
      <meta name="description"
-          content="Subhadeep Adhikary — B.Tech CSE student, Software Developer, and AI & Cybersecurity enthusiast building practical software, web, and security-focused projects." />
+          content="Subhadeep Adhikary, B.Tech CSE student, Software Developer, and AI & Cybersecurity enthusiast building practical software, web, and security-focused projects." />
 
      <meta name="keywords"
           content="Subhadeep Adhikary, Software Developer, CSE Student, Python Developer, Web Developer, AI, Cybersecurity, IoT, GitHub, Portfolio" />
@@ -31,25 +31,27 @@
      <meta name="publisher" content="Subhadeep Adhikary" />
 
      <meta name="robots" content="index, follow" />
+
      <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
      <!-- =========================================================
-         CANONICAL
-         
-         Current project deployment URL.
-         Change this ONLY if your actual deployed domain changes.
+         CANONICAL URL
     ========================================================== -->
      <link rel="canonical" href="https://subhadeep1357.github.io/my-portfolio/" />
 
      <!-- =========================================================
-         FAVICON
-         
-         Files are served from /public.
+         FAVICONS
+
+         Vite public assets are referenced relative to the deployment
+         base so they work on GitHub Pages and Vercel.
     ========================================================== -->
-     <link rel="icon" href="/favicon.ico" sizes="any" />
-     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-     <link rel="apple-touch-icon" href="/favicon-32x32.png" />
+     <link rel="icon" href="%BASE_URL%favicon.ico" sizes="any" />
+
+     <link rel="icon" type="image/png" sizes="32x32" href="%BASE_URL%favicon-32x32.png" />
+
+     <link rel="icon" type="image/png" sizes="16x16" href="%BASE_URL%favicon-16x16.png" />
+
+     <link rel="apple-touch-icon" href="%BASE_URL%favicon-32x32.png" />
 
      <!-- =========================================================
          OPEN GRAPH
@@ -59,7 +61,7 @@
      <meta property="og:title" content="Subhadeep Adhikary | Software Developer • AI • Cybersecurity" />
 
      <meta property="og:description"
-          content="Portfolio of Subhadeep Adhikary — Software Developer, AI & Cybersecurity enthusiast, and B.Tech CSE student." />
+          content="Portfolio of Subhadeep Adhikary, Software Developer, AI & Cybersecurity enthusiast, and B.Tech CSE student." />
 
      <meta property="og:url" content="https://subhadeep1357.github.io/my-portfolio/" />
 
@@ -67,7 +69,7 @@
 
      <meta property="og:image" content="https://subhadeep1357.github.io/my-portfolio/og-image.webp" />
 
-     <meta property="og:image:alt" content="Subhadeep Adhikary — Software Developer Portfolio" />
+     <meta property="og:image:alt" content="Subhadeep Adhikary Software Developer Portfolio" />
 
      <meta property="og:image:type" content="image/webp" />
 
@@ -79,14 +81,14 @@
      <meta name="twitter:title" content="Subhadeep Adhikary | Software Developer • AI • Cybersecurity" />
 
      <meta name="twitter:description"
-          content="Portfolio of Subhadeep Adhikary — Software Developer, AI & Cybersecurity enthusiast, and B.Tech CSE student." />
+          content="Portfolio of Subhadeep Adhikary, Software Developer, AI & Cybersecurity enthusiast, and B.Tech CSE student." />
 
      <meta name="twitter:image" content="https://subhadeep1357.github.io/my-portfolio/og-image.webp" />
 
-     <meta name="twitter:image:alt" content="Subhadeep Adhikary — Software Developer Portfolio" />
+     <meta name="twitter:image:alt" content="Subhadeep Adhikary Software Developer Portfolio" />
 
      <!-- =========================================================
-         STRUCTURED DATA — PERSON
+         STRUCTURED DATA: PERSON
     ========================================================== -->
      <script type="application/ld+json">
       {
@@ -106,7 +108,7 @@
     </script>
 
      <!-- =========================================================
-         STRUCTURED DATA — WEBSITE
+         STRUCTURED DATA: WEBSITE
     ========================================================== -->
      <script type="application/ld+json">
       {
@@ -120,19 +122,19 @@
 </head>
 
 <body>
-     <!-- =======================================================
-         REACT ROOT
-         
-         IMPORTANT:
-         Do not put portfolio sections/components directly here.
-         React mounts the entire application into this element.
-    ======================================================== -->
+     <!-- =========================================================
+         REACT APPLICATION ROOT
+    ========================================================== -->
      <div id="root"></div>
 
-     <!-- =======================================================
-         VITE / REACT ENTRY
-    ======================================================== -->
-     <script type="module" src="/src/main.jsx"></script>
+     <!-- =========================================================
+         VITE / REACT ENTRY POINT
+
+         IMPORTANT:
+         Do not use /src/main.jsx here.
+         Vite automatically applies the configured base path.
+    ========================================================== -->
+     <script type="module" src="%BASE_URL%src/main.jsx"></script>
 </body>
 
 </html>

@@ -2,8 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-    // Vercel uses the domain root; GitHub Pages uses the repository subpath.
-    base: process.env.GITHUB_ACTIONS === "true" ? "/my-portfolio/" : "/",
+    base: process.env.GITHUB_ACTIONS === "true"
+        ? "/my-portfolio/"
+        : "/",
 
     plugins: [react()],
 

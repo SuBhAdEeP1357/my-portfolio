@@ -1,0 +1,385 @@
+:root {
+    color-scheme: dark;
+    --color-bg: #000000;
+    --color-surface: #030303;
+    --color-surface-2: #050505;
+    --color-white: #f5f3ed;
+    --color-white-soft: #c8c5bd;
+    --color-text-muted: #8a8881;
+    --color-gold: #d4af37;
+    --color-gold-bright: #f0d77a;
+    /* Shared major section heading typography, derived from Contact. */
+    --major-section-heading-size: clamp(3.25rem, 5.8vw, 6rem);
+    --major-section-heading-font: var(--font-heading, "Gunter", serif);
+    --major-section-heading-weight: 500;
+    --major-section-heading-line-height: 0.9;
+    --major-section-heading-letter-spacing: -0.055em;
+    /* Shared text roles keep section content readable without changing layout. */
+    --text-section-title: var(--major-section-heading-size);
+    --text-section-description: 1rem;
+    --text-subheading: clamp(0.9375rem, 1vw, 1.125rem);
+    --text-card-title: clamp(1.5rem, 2vw, 2rem);
+    --text-company-title: clamp(2.25rem, 3.5vw, 3.25rem);
+    --text-modal-title: clamp(2rem, 4vw, 3.5rem);
+    --text-modal-heading: clamp(1.125rem, 1.5vw, 1.25rem);
+    --text-archive-heading: clamp(1.5rem, 2.8vw, 2.5rem);
+    --text-body: 1rem;
+    --text-body-compact: 0.9375rem;
+    --text-small: 0.875rem;
+    --text-meta: 0.6875rem;
+    --text-meta-value: 0.875rem;
+    --text-tag: var(--text-meta);
+    --text-label: 0.75rem;
+    --text-button: 0.75rem;
+    --text-nav-desktop: clamp(0.75rem, 0.84vw, 0.875rem);
+    --text-nav-mobile: 0.875rem;
+    --text-fineprint: 0.625rem;
+    --border-subtle: rgba(245, 243, 237, 0.12);
+    --border-gold: rgba(212, 175, 55, 0.48);
+
+    /* Compatibility aliases used by the retained section components. */
+    --color-black: var(--color-bg);
+    --color-black-soft: var(--color-surface);
+    --color-black-light: var(--color-surface-2);
+    --color-gold-light: var(--color-gold-bright);
+    --color-gold-dark: #a8871f;
+    --color-white-muted: var(--color-white-soft);
+    --color-gray: var(--color-text-muted);
+    --color-gray-dark: #3a3935;
+    --bg-primary: var(--color-bg);
+    --bg-secondary: var(--color-surface);
+    --bg-surface: var(--color-surface-2);
+    --text-primary: var(--color-white);
+    --text-secondary: var(--color-white-soft);
+    --text-muted: var(--color-text-muted);
+    --text-accent: var(--color-gold);
+    --border-light: rgba(245, 243, 237, 0.18);
+    --border-gold-strong: rgba(212, 175, 55, 0.72);
+
+    --container-width: 1600px;
+    --content-width: 1440px;
+    --section-padding-x: clamp(20px, 6vw, 88px);
+    --section-padding-y: clamp(76px, 9vw, 144px);
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-pill: 999px;
+    --shadow-soft: 0 18px 48px rgba(0, 0, 0, 0.24);
+    --shadow-medium: 0 24px 64px rgba(0, 0, 0, 0.35);
+    --shadow-gold: 0 0 28px rgba(212, 175, 55, 0.06);
+    --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration-fast: 180ms;
+    --duration-normal: 260ms;
+    --duration-slow: 480ms;
+    --z-content: 1;
+    --z-navbar: 1000;
+    --z-modal: 1100;
+    --z-preloader: 1200;
+}
+
+/* Match the Contact desktop heading curve at narrower desktop widths. */
+@media (min-width: 901px) and (max-width: 1100px) {
+    :root {
+        --major-section-heading-size: clamp(3.25rem, 6.8vw, 5.25rem);
+    }
+}
+
+/* The app uses its compact layout for phones and portrait tablets. */
+html.mobile-device {
+    --major-section-heading-size: clamp(3rem, 10vw, 4.25rem);
+}
+
+@media (min-width: 600px) {
+    html.mobile-device {
+        --major-section-heading-size: clamp(3.25rem, 7vw, 4.75rem);
+    }
+}
+
+@media (max-width: 359px) {
+    html.mobile-device {
+        --major-section-heading-size: 2.9rem;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 0;
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.55;
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-width: 0;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+body.preloader-active,
+body.navbar-mobile-menu-open {
+    overflow: hidden;
+}
+
+/* Hide scrollbar visuals while leaving each native scroll container usable. */
+html,
+body,
+.navbar-mobile__panel,
+.projects-all-modal__content,
+.certificate-modal__panel,
+.certificate-modal__image-frame {
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.navbar-mobile__panel::-webkit-scrollbar,
+.projects-all-modal__content::-webkit-scrollbar,
+.certificate-modal__panel::-webkit-scrollbar,
+.certificate-modal__image-frame::-webkit-scrollbar {
+    display: none;
+}
+
+#root {
+    min-height: 100vh;
+    width: 100%;
+    isolation: isolate;
+    background: var(--color-bg);
+}
+
+#root .skip-link {
+    position: fixed;
+    z-index: calc(var(--z-preloader) + 1);
+    top: max(0.75rem, env(safe-area-inset-top));
+    left: max(0.75rem, env(safe-area-inset-left));
+    padding: 0.75rem 1rem;
+    transform: translateY(calc(-100% - 1rem));
+    border: 1px solid var(--color-gold-bright);
+    border-radius: var(--radius-sm);
+    color: var(--color-bg);
+    background: var(--color-gold);
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-decoration: none;
+    transition: transform var(--duration-fast) ease;
+}
+
+#root .skip-link:focus {
+    transform: translateY(0);
+    outline: 2px solid var(--color-white);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #root .skip-link {
+        transition: none;
+    }
+}
+
+main {
+    display: block;
+    width: 100%;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    scroll-margin-top: 84px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+ul,
+ol,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+}
+
+p {
+    font-size: var(--text-body);
+    line-height: 1.6;
+}
+
+strong,
+b {
+    font-weight: 650;
+}
+
+small {
+    font-size: var(--text-small);
+}
+
+code,
+pre,
+kbd,
+samp {
+    font-family: var(--font-mono);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--color-gold-bright);
+    outline-offset: 4px;
+}
+
+button,
+input,
+textarea,
+select {
+    margin: 0;
+    font: inherit;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+svg {
+    flex-shrink: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+::selection {
+    background: rgba(212, 175, 55, 0.3);
+    color: var(--color-white);
+}
+
+.container,
+.skills__container,
+.skills-mobile__container,
+.projects__container,
+.projects-mobile__container,
+.experience-container,
+.experience-mobile__container,
+.certifications__container,
+.certifications-mobile__container,
+.contact__container,
+.contact-mobile__container,
+.site-footer__container {
+    width: min(calc(100% - (var(--section-padding-x) * 2)), var(--content-width));
+    margin-inline: auto;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.text-gold {
+    color: var(--color-gold);
+}
+
+.text-muted {
+    color: var(--color-white-soft);
+}
+
+.font-mono,
+.mono,
+[data-font="mono"] {
+    font-family: var(--font-mono);
+}
+
+@media (max-width: 700px) {
+    html {
+        scroll-padding-top: 72px;
+    }
+
+    section {
+        scroll-margin-top: 68px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --duration-fast: 0.01ms;
+        --duration-normal: 0.01ms;
+        --duration-slow: 0.01ms;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}

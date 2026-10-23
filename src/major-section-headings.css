@@ -1,0 +1,25 @@
+/* Keep all major portfolio section headings on Contact's approved scale. */
+#root #main-content h2.about-section__title,
+#root #main-content h2.about-mobile__section-title,
+#root #main-content h2.skills-showcase__title,
+#root #main-content h2.project-showcase__title,
+#root #main-content h2.experience-editorial__title,
+#root #main-content h2.experience-editorial__mobile-title,
+#root #main-content h2.credential-archive__title {
+    font-family: var(--major-section-heading-font);
+    font-size: var(--text-section-title);
+    font-weight: var(--major-section-heading-weight);
+    line-height: var(--major-section-heading-line-height);
+    letter-spacing: var(--major-section-heading-letter-spacing);
+}
+
+/* Contact remains the visual reference while consuming the shared tokens. */
+#root #main-content #contact h2.contact__title,
+#root #main-content #contact h2.contact-mobile__title {
+    font-family: var(--major-section-heading-font);
+    font-size: var(--text-section-title);
+    font-weight: var(--major-section-heading-weight);
+    line-height: var(--major-section-heading-line-height);
+    letter-spacing: var(--major-section-heading-letter-spacing);
+}
+

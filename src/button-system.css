@@ -1,0 +1,87 @@
+:root {
+    --button-radius: 8px;
+    --button-gold: var(--color-gold);
+    --button-gold-glow: 0 3px 14px rgba(212, 175, 55, 0.12);
+    --button-border: rgba(212, 175, 55, 0.42);
+    --button-hover-lift: -1px;
+    --button-press-scale: 0.99;
+    --button-transition: color var(--duration-fast) var(--ease-standard),
+        background-color var(--duration-fast) var(--ease-standard),
+        border-color var(--duration-fast) var(--ease-standard),
+        box-shadow var(--duration-fast) var(--ease-standard),
+        transform var(--duration-fast) var(--ease-standard);
+}
+
+#root .portfolio-button {
+    font-family: var(--font-ui);
+    font-size: var(--text-button);
+    font-weight: 600;
+    line-height: 1.2;
+    border: 1px solid var(--button-border);
+    border-radius: var(--button-radius);
+    box-shadow: var(--button-gold-glow);
+    min-height: 44px;
+    transition: var(--button-transition);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#root .portfolio-button--primary {
+    border-color: var(--button-gold);
+    background-color: var(--button-gold);
+    color: var(--color-bg);
+    box-shadow: 0 3px 14px rgba(212, 175, 55, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+#root .portfolio-button--secondary {
+    border-color: var(--button-border);
+    background-color: rgba(245, 243, 237, 0.025);
+    color: var(--color-white);
+    box-shadow: 0 2px 12px rgba(212, 175, 55, 0.055);
+}
+
+#root .portfolio-button:focus-visible {
+    outline: 2px solid var(--color-gold-bright);
+    outline-offset: 4px;
+}
+
+#root .portfolio-button:disabled,
+#root .portfolio-button[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.56;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #root .portfolio-button--primary:hover:not(:disabled):not([aria-disabled="true"]) {
+        transform: translateY(var(--button-hover-lift));
+        border-color: var(--color-gold-bright);
+        background-color: var(--color-gold-bright);
+        box-shadow: 0 5px 18px rgba(212, 175, 55, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        color: var(--color-bg);
+    }
+
+    #root .portfolio-button--secondary:hover:not(:disabled):not([aria-disabled="true"]) {
+        transform: translateY(var(--button-hover-lift));
+        border-color: rgba(240, 215, 122, 0.76);
+        background-color: rgba(212, 175, 55, 0.075);
+        box-shadow: 0 4px 16px rgba(212, 175, 55, 0.14);
+        color: var(--color-white);
+    }
+}
+
+#root .portfolio-button:active:not(:disabled):not([aria-disabled="true"]) {
+    transform: scale(var(--button-press-scale));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #root {
+        --button-hover-lift: 0px;
+        --button-press-scale: 1;
+    }
+
+    #root .portfolio-button {
+        transition: none;
+    }
+}

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter/Inter-Variable.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../assets/fonts/JetBrainsMono/JetBrainsMono-Variable.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+}
+
+/* Birra, Matrix II Inline OT, Goodchild Pro, and Gunter were not found in the project assets. */
+:root {
+    --font-hero-intro: "Birra", Georgia, "Palatino Linotype", Palatino, serif;
+    --font-hero-name: "Matrix II Inline OT", serif;
+    --font-hero-meta: "Goodchild Pro", serif;
+    --font-heading: "Gunter", serif;
+    --font-body: "Times New Roman", Times, serif;
+    --font-ui: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+}

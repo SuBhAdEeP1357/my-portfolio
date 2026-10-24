@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
+    // GitHub Pages uses /my-portfolio/.
+    // Vercel uses the domain root.
     base: process.env.GITHUB_ACTIONS === "true"
         ? "/my-portfolio/"
         : "/",
@@ -19,27 +21,4 @@ export default defineConfig({
         port: 4173,
         strictPort: false,
     },
-
-    build: {
-        target: "es2022",
-        sourcemap: false,
-        cssMinify: true,
-        reportCompressedSize: true,
-        chunkSizeWarningLimit: 1000,
-    },
-
-    resolve: {
-        extensions: [
-            ".js",
-            ".jsx",
-            ".json",
-            ".webp",
-            ".png",
-            ".jpg",
-            ".jpeg",
-            ".svg",
-            ".mp3",
-        ],
-    },
-
 });
